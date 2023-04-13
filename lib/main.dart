@@ -18,16 +18,15 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    var items;
     print(context);
     return MaterialApp(
       title: 'List Widget',
       home: Scaffold(
         body: ListView.builder(
-          itemCount: items.length,
+          itemCount: widget.items.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(items[index]),
+              title: Text(widget.items[index]),
             );
           },
         ),
